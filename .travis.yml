@@ -33,6 +33,7 @@ before_script:
     - echo -e "Host 54.245.251.164\n\tStrictHostKeyChecking no\n\tIdentityFile ~/.ssh/id_rsa\n\tBatchMode yes\n" >> ~/.ssh/config
 script: sbt test
 after_success:
+    - sbt package
     - scp target/scala-2.11/pingpong-nickname-generator_2.11-1.war ubuntu@54.245.251.164:/home/tomcat/webapps/ROOT.war
 
 
