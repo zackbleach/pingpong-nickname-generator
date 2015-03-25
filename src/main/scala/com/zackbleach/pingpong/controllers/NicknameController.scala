@@ -7,7 +7,7 @@ import com.zackbleach.pingpong.services._
 
 class NicknameController extends JsonController {
 
-  get("/"){
+  get("/?"){
     Nickname(NicknameService.getNickName())
   }
 
