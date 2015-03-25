@@ -27,7 +27,8 @@ env:
 - secure: "KlQp39+VydsC8l7+x1Ug4uy0AgMCXzJE4kWbftwmpQBa581yKxaiXYO5bqxXwi6P1UsnF6KlkjvkIp81dNx2RhmAn0KB+N5hthwUubeE1FZCSM7+/dNszX9p+T7IwjlyCxjKLcZDj/qcUIqRYxVPr2hLmKdlQJ+VR+44sVMN1YM="
 - secure: "Gkhk+PDps9X5o7ovvHnNQ6QtgbVhBS89MhMQJ18vIlFpmfmA5SfFgrWWC0iEfK1Xk2iXfdW+Od7XJw3hGG2DDFl1NHStDfojxx4KLAxY8g/TG3BNMqAoWi2CnuGkAdLDFh9y1/1klEn54KdgxTNxFTVLBhhiYEGR23BmRyKUcjY="
 - secure: "UeqJQk15c1XvRbwh4m3omnEF0l+dJUWADJpy563DX99Cz7eYzQ0W0eRuZvQx2fNQ+kCcPdxRTGTpUAxo7x9qmFXNRz0DpL/OaU946Jb42u2LyRbFcBzhTVmhoJZRUMTgsJC7Lz1UJCQZVF/oT3x4YmqavGFcda5wBltK1DQP2lI="
-efore_script:
+
+before_script:
     - echo -n $id_rsa_{00..30} >> ~/.ssh/id_rsaravis_base64
     - base64 --decode --ignore-garbage ~/.ssh/id_rsaravis_base64 > ~/.ssh/id_rsa
     - chmod 600 ~/.ssh/id_rsa
