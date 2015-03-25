@@ -34,6 +34,6 @@ before_script:
 script: sbt test
 after_success:
     - sbt package
-    - scp target/scala-2.11/pingpong-nickname-generator_2.11-1.war ubuntu@54.245.251.164:/home/tomcat/webapps/ROOT.war
+    - scp target/scala-2.11/pingpong-nickname-generator_2.11-1.war ubuntu@54.245.251.164:/home/ubuntu/tomcat/webapps/ROOT.war
 
 
